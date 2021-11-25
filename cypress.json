@@ -1,0 +1,6 @@
+{
+  "component": {
+    "testFiles": "**/*.test.{js.ts.tsx.jsx}",
+    "componentFolder": "src"
+  }
+}

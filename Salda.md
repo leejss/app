@@ -1,0 +1,1 @@
+1. index.page의 main className의 container is missing
