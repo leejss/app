@@ -1,0 +1,24 @@
+.UIHeader {
+  height: 60px;
+  background-color: rgb(14, 132, 250);
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+}
+.Body {
+  height: 1000px;
+  background: rgb(1, 255, 149);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.UIFooter {
+  height: 56px;
+  background-color: red;
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+}

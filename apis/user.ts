@@ -2,8 +2,8 @@ import client from "../utils/client";
 import { User } from "../types/User";
 
 export const getUsers = async () => {
-  const response = await client.getData<User[]>("/users");
-  return response.data;
+  const { data } = await client.getData<User[]>("/users");
+  return data;
 };
 export const postUser = async (data: User) => {
   const response = await client.postData<User>("/users", {
