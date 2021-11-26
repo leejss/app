@@ -1,11 +1,12 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 
-class HTTPClient<T> {
+export class HTTPClient<T> {
   private instance: AxiosInstance;
-  constructor(target = "") {
+  constructor(target = "", config?: AxiosRequestConfig) {
     this.instance = axios.create({
       baseURL: target ? target : "",
       timeout: 10000,
+      ...config,
     });
   }
   async getData<T>(action: string, config?: AxiosRequestConfig) {
@@ -46,4 +47,5 @@ class HTTPClient<T> {
   }
 }
 
-export default new HTTPClient();
+const client = new HTTPClient("https://jsonplaceholder.typicode.com/");
+export default client;
