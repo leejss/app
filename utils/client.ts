@@ -21,7 +21,7 @@ export class HTTPClient<T> {
     }
   }
 
-  async postData<T, D>(action: string, config?: AxiosRequestConfig<D>) {
+  async postData<T>(action: string, config?: AxiosRequestConfig<T>) {
     try {
       const response = await this.instance.post<T>(action, config);
       return response;
@@ -30,9 +30,10 @@ export class HTTPClient<T> {
     }
   }
 
-  async putData<T, D>(action: string, config?: AxiosRequestConfig<D>) {
+  async putData<T>(action: string, config?: AxiosRequestConfig<T>) {
     try {
       const response = await this.instance.put<T>(action, config);
+      return response;
     } catch (error) {
       throw error;
     }
@@ -41,11 +42,12 @@ export class HTTPClient<T> {
   async deleteData<T>(action: string, config?: AxiosRequestConfig) {
     try {
       const response = await this.instance.delete<T>(action, config);
+      return response;
     } catch (error) {
       throw error;
     }
   }
 }
 
-const client = new HTTPClient("https://jsonplaceholder.typicode.com/");
+const client = new HTTPClient("http://localhost:8008");
 export default client;
