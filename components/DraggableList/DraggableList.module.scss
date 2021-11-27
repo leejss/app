@@ -28,6 +28,7 @@
     background: lightblue;
     text-transform: uppercase;
     letter-spacing: 2px;
+    touch-action: none;
   }
 
   > div:nth-child(1) {
