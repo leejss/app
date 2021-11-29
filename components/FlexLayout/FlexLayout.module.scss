@@ -1,0 +1,21 @@
+.LayoutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.TopContainer {
+  position: relative;
+}
+
+.BodyContainer {
+  flex: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.BottomContainer {
+  position: relative;
+}
