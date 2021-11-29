@@ -1,0 +1,26 @@
+.LayoutContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.HeaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.BodyContainer {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.FooterContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
