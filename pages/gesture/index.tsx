@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./GesturePage.module.scss";
+import SlideGesture from "../../components/SlideGesture/SlideGesture";
 
 const GesturePage = () => {
-  return <div></div>;
+  return <SlideGesture />;
 };
 
 export default GesturePage;

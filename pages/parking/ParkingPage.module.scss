@@ -100,3 +100,17 @@
     background: coral;
   }
 }
+
+.TextCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  span {
+    color: coral;
+  }
+  > div {
+    font-size: 24px;
+    font-weight: 800;
+  }
+}

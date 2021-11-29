@@ -18,6 +18,20 @@ const ParkingPage = () => {
             <span>차주와 연락이 가능한가요?</span>
           </div>
           <List />
+          <TextCard
+            lines={[
+              <div key="1">
+                우리아파트 <span>주차관리</span>로
+              </div>,
+              <div key="2">즉시 해결하세요.</div>,
+            ]}
+          />
+          {/* <TextCard
+            lines={[
+              <div>단지에 차량정보가 등록되어 있으면</div>,
+              <div>입주민 분들은 바로 이용가능합니다.</div>,
+            ]}
+          /> */}
         </div>
       </FlexLayout.Body>
       <FlexLayout.Bottom>
@@ -58,4 +72,12 @@ const BottomButton: React.FC = function BottomButton() {
       <button>주차관리 써보고 싶어요</button>
     </div>
   );
+};
+
+interface TextCardProps {
+  lines?: React.ReactNode[];
+}
+
+const TextCard: React.FC<TextCardProps> = function TextCard({ lines }) {
+  return <div className={styles.TextCardWrapper}>{lines}</div>;
 };
