@@ -1,5 +1,8 @@
 import React from "react";
+import { useFullHeight } from "../../hooks/useFullHeight";
 import styles from "./FlexLayout.module.scss";
+import cx from "classnames";
+import { css } from "@emotion/css";
 
 const Top: React.FC = ({ children }) => {
   return <div className={styles.TopContainer}>{children}</div>;
@@ -19,8 +22,27 @@ interface CompoundLayoutComposiiton {
   Bottom: typeof Bottom;
 }
 
-const FlexLayout: React.FC & CompoundLayoutComposiiton = ({ children }) => {
-  return <div className={styles.LayoutContainer}>{children}</div>;
+interface FlexLayoutProps {
+  backgroundColor?: string;
+}
+
+const FlexLayout: React.FC<FlexLayoutProps> & CompoundLayoutComposiiton = ({
+  children,
+  backgroundColor,
+}) => {
+  const height = useFullHeight();
+  const heightStyle = css`
+    height: ${height}px;
+  `;
+  const backgroundStyle = css`
+    background-color: ${backgroundColor};
+  `;
+  const classNames = cx(
+    styles.LayoutContainer,
+    heightStyle,
+    backgroundColor && backgroundStyle
+  );
+  return <div className={classNames}>{children}</div>;
 };
 
 FlexLayout.Top = Top;

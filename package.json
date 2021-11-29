@@ -9,6 +9,7 @@
     "json-server": "npx json-server --watch db.json --port 8008"
   },
   "dependencies": {
+    "@emotion/css": "^11.5.0",
     "@use-gesture/react": "^10.1.6",
     "axios": "^0.24.0",
     "classnames": "^2.3.1",
